@@ -21,4 +21,4 @@ grd ~ blue cable ~ pin 6 (on pi4 ran to pin 9)<br>
 
 <br>
 schematic<br>
-![PI Diagram](./schematic.png)
+![](images/schematic.png)
