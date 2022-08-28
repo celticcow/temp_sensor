@@ -35,6 +35,8 @@ def get_sensor_info(location_name):
 
         print(temp)
         print(humidity)
+
+        dhtSensor.exit()
         break
 
 #end of get_sensor_info
