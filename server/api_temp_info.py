@@ -6,8 +6,34 @@ import time
 
 from flask import Flask, request
 
-
 app = Flask(__name__)
+
+@app.route('/sensor_report', methods=['POST'])
+def sensor_report():
+    debug = 1
+    if(debug == 1):
+        print("in report")
+
+    sensor_name = "unknown"
+    temp = "unknown"
+    humidity = "unknown"
+
+    sensor_info = request.get_json(force=True)
+
+    try:
+        sensor_name = sensor_info['sensor_name']
+        temp = sensor_info['temp']
+        humidity = sensor_info['humidity']
+    except:
+        print("issue getting fields")
+    
+    if(debug == 1):
+        print(sensor_name)
+        print(temp)
+        print(humidity)
+    
+    return({"result" : "success"})
+#end of sensor_report
 
 @app.route('/')
 def root():

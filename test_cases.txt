@@ -1,0 +1,2 @@
+curl -k localhost:4000/sensor_report -d '{"sensor_name" : "office", "temp" : "75", "humidity" : "58"}'
+{"result":"success"}
